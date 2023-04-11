@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96610CF729E53C7F00011D3F /* WaveFormImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96610CF629E53C7F00011D3F /* WaveFormImage.swift */; };
+		96610CF929E53CD000011D3F /* WindowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96610CF829E53CD000011D3F /* WindowSize.swift */; };
+		96610CFB29E53D4500011D3F /* OpenAudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96610CFA29E53D4500011D3F /* OpenAudioFile.swift */; };
 		9677372A29E43FBA004F0886 /* AudioViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677372929E43FBA004F0886 /* AudioViewApp.swift */; };
 		9677372C29E43FBA004F0886 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677372B29E43FBA004F0886 /* ContentView.swift */; };
 		9677372E29E43FBB004F0886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9677372D29E43FBB004F0886 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96610CF629E53C7F00011D3F /* WaveFormImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFormImage.swift; sourceTree = "<group>"; };
+		96610CF829E53CD000011D3F /* WindowSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSize.swift; sourceTree = "<group>"; };
+		96610CFA29E53D4500011D3F /* OpenAudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAudioFile.swift; sourceTree = "<group>"; };
 		9677372629E43FBA004F0886 /* AudioView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9677372929E43FBA004F0886 /* AudioViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewApp.swift; sourceTree = "<group>"; };
 		9677372B29E43FBA004F0886 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 			children = (
 				9677372929E43FBA004F0886 /* AudioViewApp.swift */,
 				9677372B29E43FBA004F0886 /* ContentView.swift */,
+				96610CF629E53C7F00011D3F /* WaveFormImage.swift */,
+				96610CFA29E53D4500011D3F /* OpenAudioFile.swift */,
+				96610CF829E53CD000011D3F /* WindowSize.swift */,
 				9677372D29E43FBB004F0886 /* Assets.xcassets */,
 				9677373229E43FBB004F0886 /* AudioView.entitlements */,
 				9677372F29E43FBB004F0886 /* Preview Content */,
@@ -263,7 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96610CF729E53C7F00011D3F /* WaveFormImage.swift in Sources */,
 				9677372C29E43FBA004F0886 /* ContentView.swift in Sources */,
+				96610CFB29E53D4500011D3F /* OpenAudioFile.swift in Sources */,
+				96610CF929E53CD000011D3F /* WindowSize.swift in Sources */,
 				9677372A29E43FBA004F0886 /* AudioViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
