@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct AudioViewApp: App {
+    
+    @State private var audioFilePath: String?
+    @State private var waveformImage: NSImage?
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(waveformImage: $waveformImage)
+                .frame(minWidth: 800, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+        }.commands {
+            CommandGroup(replacing: .newItem) {
+                Button("Open Audio File") {
+                    (audioFilePath, waveformImage) = openAudioFileDialog()
+                }
+            }
         }
     }
 }
+
