@@ -4,6 +4,8 @@ A SwiftUI project for Macos to View an Audio file (filetypes currently allowed: 
 
 Select "Open Audio File" from the menu and it'll generate a waveform view.
 
+![](AudioView.png)
+
 This project was created as an exercise in SwiftUI.
 
 - - -
