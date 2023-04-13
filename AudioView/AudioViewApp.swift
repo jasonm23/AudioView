@@ -12,16 +12,17 @@ struct AudioViewApp: App {
     
     @State private var audioFilePath: String?
     @State private var waveformImage: NSImage?
+    @State private var duration: Double?
     
     var body: some Scene {
         WindowGroup {
-            ContentView(waveformImage: $waveformImage)
-                .frame(minWidth: 800, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+            ContentView(waveformImage: $waveformImage, duration: $duration)
+                .frame(minWidth: 800, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)            
         }.commands {
             CommandGroup(replacing: .newItem) {
                 Button("Open Audio File") {
-                    (audioFilePath, waveformImage) = openAudioFileDialog()
-                }
+                    (audioFilePath, waveformImage, duration) = openAudioFileDialog()
+                }.keyboardShortcut("o")
             }
         }
     }

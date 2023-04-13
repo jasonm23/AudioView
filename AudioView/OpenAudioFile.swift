@@ -7,21 +7,24 @@
 
 import SwiftUI
 
-func openAudioFileDialog() -> (String?, NSImage?) {
+func openAudioFileDialog(allowed: [String] = ["m4a", "mp3", "wav", "aiff"]) -> (String?, NSImage?, Double?) {
     let dialog = NSOpenPanel()
     dialog.title = "Choose an audio file"
-    dialog.allowedFileTypes = ["m4a", "mp3", "wav", "aiff"]
+    dialog.allowedFileTypes = allowed
     
     if dialog.runModal() == .OK {
         if let audioFilePath = dialog.url?.path {
             let audioURL = URL(fileURLWithPath: audioFilePath)
             let windowSize = windowSize()
-            let waveformImage = getWaveformImage(audioURL: audioURL, size: windowSize)
-            return (audioFilePath, waveformImage)
+            
+            let (waveformImage, duration) = getWaveformImage(audioURL: audioURL,
+                                                             size: windowSize)
+            
+            return (audioFilePath, waveformImage, duration)
         } else {
-            return (nil, nil)
+            return (nil, nil, nil)
         }
     } else {
-        return (nil,nil)
+        return (nil, nil, nil)
     }
 }
