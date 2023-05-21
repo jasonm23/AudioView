@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6773F033B7534E354750F59F /* WaveformGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0112D375F8F1F7DB44E4FF6C /* WaveformGraphic.swift */; };
+		67A1B3506C22C3B0B8C74856 /* TimeRibbonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CD5E127F24E303E16A8C70 /* TimeRibbonView.swift */; };
+		7072C80ED9A90D2B821FECD2 /* ZeroGLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEAC6BE021A714E61BC982 /* ZeroGLineView.swift */; };
+		89C474B061DF185C2AECB956 /* WaveFormImageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E0554F6917A1D9CD8E406D /* WaveFormImageContentView.swift */; };
 		96610CF729E53C7F00011D3F /* WaveFormImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96610CF629E53C7F00011D3F /* WaveFormImage.swift */; };
 		96610CF929E53CD000011D3F /* WindowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96610CF829E53CD000011D3F /* WindowSize.swift */; };
 		96610CFB29E53D4500011D3F /* OpenAudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96610CFA29E53D4500011D3F /* OpenAudioFile.swift */; };
 		9677372A29E43FBA004F0886 /* AudioViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677372929E43FBA004F0886 /* AudioViewApp.swift */; };
-		9677372C29E43FBA004F0886 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677372B29E43FBA004F0886 /* ContentView.swift */; };
 		9677372E29E43FBB004F0886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9677372D29E43FBB004F0886 /* Assets.xcassets */; };
 		9677373129E43FBB004F0886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9677373029E43FBB004F0886 /* Preview Assets.xcassets */; };
 		9677373C29E43FBC004F0886 /* AudioViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677373B29E43FBC004F0886 /* AudioViewTests.swift */; };
 		9677374629E43FBC004F0886 /* AudioViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677374529E43FBC004F0886 /* AudioViewUITests.swift */; };
 		9677374829E43FBC004F0886 /* AudioViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677374729E43FBC004F0886 /* AudioViewUITestsLaunchTests.swift */; };
+		D751C7F0834CDB8FFCD149E5 /* WaveformImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696B0478B5968D2285B724A9 /* WaveformImageView.swift */; };
+		FE488908EF1CB982D27B5739 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257A36CBAC953A1BDBD58D02 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0112D375F8F1F7DB44E4FF6C /* WaveformGraphic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WaveformGraphic.swift; sourceTree = "<group>"; };
+		19E0554F6917A1D9CD8E406D /* WaveFormImageContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WaveFormImageContentView.swift; sourceTree = "<group>"; };
+		257A36CBAC953A1BDBD58D02 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		696B0478B5968D2285B724A9 /* WaveformImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WaveformImageView.swift; sourceTree = "<group>"; };
+		87CD5E127F24E303E16A8C70 /* TimeRibbonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeRibbonView.swift; sourceTree = "<group>"; };
 		96610CF629E53C7F00011D3F /* WaveFormImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFormImage.swift; sourceTree = "<group>"; };
 		96610CF829E53CD000011D3F /* WindowSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSize.swift; sourceTree = "<group>"; };
 		96610CFA29E53D4500011D3F /* OpenAudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAudioFile.swift; sourceTree = "<group>"; };
 		9677372629E43FBA004F0886 /* AudioView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9677372929E43FBA004F0886 /* AudioViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewApp.swift; sourceTree = "<group>"; };
-		9677372B29E43FBA004F0886 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9677372D29E43FBB004F0886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9677373029E43FBB004F0886 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9677373229E43FBB004F0886 /* AudioView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioView.entitlements; sourceTree = "<group>"; };
@@ -51,6 +60,7 @@
 		9677374129E43FBC004F0886 /* AudioViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9677374529E43FBC004F0886 /* AudioViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewUITests.swift; sourceTree = "<group>"; };
 		9677374729E43FBC004F0886 /* AudioViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9ECEAC6BE021A714E61BC982 /* ZeroGLineView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ZeroGLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +111,19 @@
 		9677372829E43FBA004F0886 /* AudioView */ = {
 			isa = PBXGroup;
 			children = (
-				9677372929E43FBA004F0886 /* AudioViewApp.swift */,
-				9677372B29E43FBA004F0886 /* ContentView.swift */,
-				96610CF629E53C7F00011D3F /* WaveFormImage.swift */,
-				96610CFA29E53D4500011D3F /* OpenAudioFile.swift */,
-				96610CF829E53CD000011D3F /* WindowSize.swift */,
 				9677372D29E43FBB004F0886 /* Assets.xcassets */,
 				9677373229E43FBB004F0886 /* AudioView.entitlements */,
+				9677372929E43FBA004F0886 /* AudioViewApp.swift */,
+				257A36CBAC953A1BDBD58D02 /* ColorExtension.swift */,
+				96610CFA29E53D4500011D3F /* OpenAudioFile.swift */,
 				9677372F29E43FBB004F0886 /* Preview Content */,
+				87CD5E127F24E303E16A8C70 /* TimeRibbonView.swift */,
+				0112D375F8F1F7DB44E4FF6C /* WaveformGraphic.swift */,
+				96610CF629E53C7F00011D3F /* WaveFormImage.swift */,
+				19E0554F6917A1D9CD8E406D /* WaveFormImageContentView.swift */,
+				696B0478B5968D2285B724A9 /* WaveformImageView.swift */,
+				96610CF829E53CD000011D3F /* WindowSize.swift */,
+				9ECEAC6BE021A714E61BC982 /* ZeroGLineView.swift */,
 			);
 			path = AudioView;
 			sourceTree = "<group>";
@@ -154,8 +169,6 @@
 			dependencies = (
 			);
 			name = AudioView;
-			packageProductDependencies = (
-			);
 			productName = AudioView;
 			productReference = 9677372629E43FBA004F0886 /* AudioView.app */;
 			productType = "com.apple.product-type.application";
@@ -228,8 +241,6 @@
 				Base,
 			);
 			mainGroup = 9677371D29E43FBA004F0886;
-			packageReferences = (
-			);
 			productRefGroup = 9677372729E43FBA004F0886 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,10 +284,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				96610CF729E53C7F00011D3F /* WaveFormImage.swift in Sources */,
-				9677372C29E43FBA004F0886 /* ContentView.swift in Sources */,
 				96610CFB29E53D4500011D3F /* OpenAudioFile.swift in Sources */,
 				96610CF929E53CD000011D3F /* WindowSize.swift in Sources */,
 				9677372A29E43FBA004F0886 /* AudioViewApp.swift in Sources */,
+				7072C80ED9A90D2B821FECD2 /* ZeroGLineView.swift in Sources */,
+				67A1B3506C22C3B0B8C74856 /* TimeRibbonView.swift in Sources */,
+				D751C7F0834CDB8FFCD149E5 /* WaveformImageView.swift in Sources */,
+				6773F033B7534E354750F59F /* WaveformGraphic.swift in Sources */,
+				89C474B061DF185C2AECB956 /* WaveFormImageContentView.swift in Sources */,
+				FE488908EF1CB982D27B5739 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.7;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -419,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.7;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -488,14 +504,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DDUM6CHDSV;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = info.ocodo.AudioViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioView.app/Contents/MacOS/AudioView";
@@ -507,14 +525,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DDUM6CHDSV;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = info.ocodo.AudioViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioView.app/Contents/MacOS/AudioView";
@@ -525,13 +545,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DDUM6CHDSV;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = info.ocodo.AudioViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = AudioView;
@@ -542,13 +564,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DDUM6CHDSV;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = info.ocodo.AudioViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = AudioView;
