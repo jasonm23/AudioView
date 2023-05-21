@@ -1,23 +1,80 @@
 import SwiftUI
 
-struct ContentView: View {
+extension Color {
+    static var systemTeal: Color {
+        let teal = NSColor.systemTeal
+        return Color(teal)
+    }
+}
+
+struct WaveFormImageContentView: View {
     @Binding var waveformImage: NSImage?
     @Binding var duration: Double?
-   
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                ZStack {
-                    if let waveformImage = waveformImage,
-                       let duration = duration {
-                        Image(nsImage: waveformImage)
-                            .resizable()
-                            .aspectRatio(contentMode: ContentMode.fill)
-                        ZeroGLineView(height: geometry.size.height)
-                        TimeRibbonView(duration: duration, interval: 1)
-                    }
+               ZStack {
+                   if let duration = duration {
+                       WaveformImageView(waveformImage: $waveformImage)
+                       ZeroGLineView(height: geometry.size.height)
+                       TimeRibbonView(duration: duration, interval: 1)
+                   }
+               }
+            }
+        }
+    }
+}
+
+struct WaveFormGraphicContentView: View {
+    @Binding var lines: [Float]?
+    @Binding var duration: Double?
+
+    var body: some View {
+        GeometryReader { geometry in
+            VStack {
+                if let lines = lines {
+                    WaveformGraphic(lines, steps: UInt(geometry.size.width / 3), lineWidth: 2)
                 }
             }
+        }
+    }
+}
+
+struct WaveformGraphic: View {
+    let lines: [Float]
+    let steps: UInt
+    let lineWidth: Int
+    
+    init(_ lines: [Float], steps: UInt = 100, lineWidth: Int = 6) {
+        self.steps = steps
+        self.lineWidth = lineWidth
+        let scaled = lines.downSampled(steps: steps)
+        self.lines = scaled.map { abs($0) }
+    }
+    
+    var body: some View {
+        GeometryReader { geometry in
+            HStack{
+                ForEach(lines, id: \.self) { line in
+                    Rectangle()
+                        .frame(width: CGFloat(lineWidth), height: CGFloat(line))
+                        .cornerRadius(10)
+                        .foregroundColor(.systemTeal)
+                }
+            }.frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+            
+        }
+    }
+}
+
+struct WaveformImageView: View {
+    @Binding var waveformImage: NSImage?
+    var body: some View {
+        if let waveformImage = waveformImage {
+            Image(nsImage: waveformImage)
+                .resizable()
+                .aspectRatio(contentMode: ContentMode.fill)
         }
     }
 }

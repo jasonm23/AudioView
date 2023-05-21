@@ -14,6 +14,25 @@ extension Array where Element == Float {
         return self.downSampled(width: Int(size.width), height: Int(size.height), scaleFactor: scaleFactor)
     }
     
+    func downSampled(steps: UInt) -> [Float] {
+        // Parameters
+        let inputData = self
+        let inputLength = vDSP_Length(inputData.count)
+        let decimationFactor = vDSP_Length(inputLength / steps)
+        let outputLength = vDSP_Length(inputLength / decimationFactor)
+        var outputData = [Float](repeating: 0, count: Int(outputLength))
+
+        // Create a smoothing filter
+        let filterTaps: [Float] = [1, 1]
+        let filterLength = vDSP_Length(filterTaps.count)
+
+        // Call vDSP_desamp with smoothing filter
+        vDSP_desamp(inputData, vDSP_Stride(decimationFactor), filterTaps, &outputData, outputLength, filterLength)
+
+        // Display the calculated averages
+        return outputData
+    }
+    
     func downSampled(width: Int, height: Int, scaleFactor: Int = 2) -> [Float] {
         let count = self.count
         let resampleCount = Swift.max((count / 10), width)
@@ -73,12 +92,17 @@ extension Array where Element == Float {
     }
 }
 
-func getWaveformImage(audioURL: URL, size: CGSize, range: ClosedRange<Int>? = nil) -> (NSImage?, Double?) {
-    
+struct WaveformMetadata {
+    let url: URL
+    let duration: Double
+    let samples: [Float]
+}
+
+func getWaveformSamples(audioURL: URL, size: CGSize, range: ClosedRange<Int>? = nil, scaleFactor: Int = 6) -> WaveformMetadata? {
     // Create an AVAudioFile object with the specified URL
     guard let audioFile = try? AVAudioFile(forReading: audioURL) else {
         print("Unable to read \(audioURL.path)")
-        return (nil, nil)
+        return nil
     }
     
     // Get the format of the audio file (e.g. sample rate, number of channels)
@@ -95,22 +119,32 @@ func getWaveformImage(audioURL: URL, size: CGSize, range: ClosedRange<Int>? = ni
         try audioFile.read(into: buffer)
     } catch {
         print("Unable to read \(audioURL.path) info buffer")
-        return (nil, nil)
+        return nil
     }
     
     // Get the float array of samples from the buffer
     let rawSamples = Array(UnsafeBufferPointer(start: buffer.floatChannelData![0], count: Int(buffer.frameLength)))
     var selectedSamples = rawSamples
     
-    
     // Select range.
     if let range = range {
         selectedSamples = Array(rawSamples[range])
     }
     
-    let samples = selectedSamples
-        .downSampled(size: size, scaleFactor: 6)
+    let samples: [Float] = selectedSamples.downSampled(size: size, scaleFactor: scaleFactor)
+
+    let duration = Double(samples.count) / format.sampleRate
     
+    return WaveformMetadata(url: audioURL, duration: duration, samples: samples)
+}
+
+func getWaveformImage(audioURL: URL, size: CGSize, range: ClosedRange<Int>? = nil) -> (NSImage?, Double?) {
+    
+    guard let waveformMetadata  = getWaveformSamples(audioURL: audioURL, size: size, range: range) else {
+        return (nil, nil)
+    }
+    
+    let samples = waveformMetadata.samples
     // Create path
     let path = NSBezierPath()
     
@@ -126,8 +160,6 @@ func getWaveformImage(audioURL: URL, size: CGSize, range: ClosedRange<Int>? = ni
         path.line(to: CGPoint(x: x, y: y))
     }
     
-    let duration = Double(samples.count) / format.sampleRate
-    
     // Create image
     let image = NSImage(size: size)
     image.lockFocus()
@@ -135,5 +167,5 @@ func getWaveformImage(audioURL: URL, size: CGSize, range: ClosedRange<Int>? = ni
     path.stroke()
     image.unlockFocus()
     
-    return (image, duration)
+    return (image, waveformMetadata.duration)
 }
